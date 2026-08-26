@@ -19,5 +19,18 @@ class DeepSeekV3ModelArgs:
     moe_args: MoEArgs = field(default_factory=MoEArgs)
 
     #Multi-head latent attention (MLA)
+    q_lora_rank: int = 0
+    kv_lora_rank: int = 512
+    qk_rope_head_dim: int = 128
+    qk_rope_head_dim: int = 64
+    v_head_dim: int = 128
+
+    # yarn
+    original_seq_len: int = 4096
+    rope_theta: float = 10000.0
+    rope_factor: float = 40
+    beta_fast: int = 32
+    beta_slow: int = 1
+    mscale: float = 1.0 
     
 
