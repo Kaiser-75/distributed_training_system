@@ -4,7 +4,6 @@ from torch import nn
 from torchfeather.model.moe import MoEArgs
 
 @dataclass
-
 class DeepSeekV3ModelArgs:
     max_seq_len: int = 4096*4
     vocab_size: int = 102400
